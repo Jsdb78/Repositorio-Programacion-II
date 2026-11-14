@@ -1,0 +1,32 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package gestiontickets;
+
+/**
+ *
+ * @author Jonathan
+ */
+public class TareaBase {
+    private String idTicket;
+    private String titulo;
+    protected boolean resuelto;
+    
+    public TareaBase (String idTicket, String titulo, boolean resuelto){
+        this.idTicket = idTicket;
+        this.titulo = titulo;
+        this.resuelto = resuelto;
+    }// fin constructor
+    
+    
+    public void marcaResuelto(){
+        this.resuelto = true;
+        System.out.printf("El Ticket %s ha sido cerrado\n", this.idTicket);
+        System.out.printf("Nombre Ticket %s",this.titulo);
+    }
+    
+    public int calcularPrioridad(){
+        return 1;
+    }
+}
